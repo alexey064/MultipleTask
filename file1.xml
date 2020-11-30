@@ -1,0 +1,20 @@
+<ErrorCodes>
+<ErrorCode code="-1" text="Оператор временно недоступен"/>
+<ErrorCode code="0" text="Ошибки нет"/>
+<ErrorCode code="2" text="сеть недоступна"/>
+<ErrorCode code="3" text="искомый адрес недоступен"/>
+<ErrorCode code="4" text="ошибка доступа"/>
+<ErrorCode code="5" text="услуга более недоступна"/>
+<ErrorCode code="6" text="услуга недоступна в данном регионе"/>
+<ErrorCode code="7" text="услуга уже подключена"/>
+<ErrorCode code="8" text="сервер недоступен"/>
+<ErrorCode code="9" text="недостаточно денег для осуществления операции"/>
+<ErrorCode code="10" text="отказано в доступе"/>
+<ErrorCode code="11" text="оператор голоден"/>
+<ErrorCode code="12" text="оператор не свободен"/>
+<ErrorCode code="13" text="вы позвонили во время обеденного перерыва"/>
+<ErrorCode code="15" text="вы позвонили слишком рано, попробуйте позже"/>
+<ErrorCode code="16" text="вы позвонили слишком поздно, надо было звонить раньше"/>
+<ErrorCode code="18" text="ночью звонить операторам нельзя"/>
+<ErrorCode code="20" text="оператор спит"/>
+</ErrorCodes>

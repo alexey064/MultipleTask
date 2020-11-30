@@ -1,0 +1,532 @@
+Вызван метод IsDBCreated
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+Не удается открыть базу данных "Collection", запрашиваемую именем входа. Не удалось выполнить вход. ClientConnectionId:89310f45-c9d6-4352-b95e-be3106b9418c
+База данных не найдена. Создаем базу данных
+запрос sql: CREATE DATABASE Collection ON PRIMARY (NAME = Collection, FILENAME = 'F:\MultipleTask\Collection.mdf', SIZE = 2MB, MAXSIZE = 100MB, FILEGROWTH = 10%) LOG ON (NAME = Collection_Log, FILENAME = 'F:\MultipleTask\Collection.ldf', SIZE = 1MB, MAXSIZE = 100MB, FILEGROWTH = 10%)
+Отключаем соединение с базой данных
+Метод SQLDataBaseCreate выполнен
+запускаем task1
+запускаем task2
+запускаем task3
+task1: задача запущена
+вторая задача запущена
+task3: задача запущена
+task2: Создаем объект xml1
+task1: переменная json создана
+task3: вызван метод GetTableName для обьекта
+task2: вызван метод GetTableName для обьекта
+task3: открываем файл file2.xml
+task2: открываем файл file1.xml
+task2: Прочитали строку: <ErrorCodes>
+task3: Прочитали строку: <Categories>
+task3: закончен метод GetTableName
+task2: закончен метод GetTableName
+task2: вызван метод GetColumnInfo
+task2: Открываем файл file1.xml
+task3: вызван метод GetColumnInfo
+task2: прочитали строку: <ErrorCode code="-1" text="Оператор временно недоступен"/>
+task2: вызван метод GetParamCount с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/>
+task3: Открываем файл file2.xml
+task3: прочитали строку:     <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/>
+task3: вызван метод GetParamCount с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/>
+task3: метод GetParamCount завершен и вернул output=4
+task2: метод GetParamCount завершен и вернул output=2
+task3: вызван метод getName с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> index=0
+task2: вызван метод getName с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> index=0
+task3:закончен метод getName и вернул результат output=id
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=0
+task2:закончен метод getName и вернул результат output=code
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> Index=0
+task3: метод getValue завершен и вернул output=100
+task3: вызван метод getName с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> index=1
+task3:закончен метод getName и вернул результат output=name
+task2: метод getValue завершен и вернул output=-1
+task2: вызван метод getName с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=1
+task2:закончен метод getName и вернул результат output=text
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> Index=1
+task3: метод getValue завершен и вернул output=Автоматический выбор оператора
+task2: метод getValue завершен и вернул output=Оператор временно недоступен
+task3: вызван метод getName с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> index=2
+task2: завершен метод GetColumnInfo
+task3:закончен метод getName и вернул результат output=parent
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=2
+task2: создаем sql код таблицыErrorCodes в файл file1.xmlTableCreate.sql
+task3: метод getValue завершен и вернул output=0
+task2: запускаем метод WriteTableHeaderProcedure
+task3: вызван метод getName с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> index=3
+Вызван метод WriteTableHeaderProcedure
+task3:закончен метод getName и вернул результат output=image
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_main_ico.gif
+task3: завершен метод GetColumnInfo
+Вызван метод WriteTableHeaderProcedure
+строка sql запроса: IF NOT EXISTS (SELECT * FROM SYSOBJECTS WHERE NAME='ErrorCodes' AND xtype='U') Create table dbo.ErrorCodes(code int primary key ,text  nvarchar(100));
+строка sql запроса: IF NOT EXISTS (SELECT * FROM SYSOBJECTS WHERE NAME='Categories' AND xtype='U') Create table dbo.Categories(id int primary key ,name  nvarchar(100),parent  nvarchar(100),image  nvarchar(100));
+записываем в файл file2.xmlTableCreate.sql
+записываем в файл file1.xmlTableCreate.sql
+завершен метод WriteTableHeaderProcedure
+task2: Создаем таблицу ErrorCodes
+завершен метод WriteTableHeaderProcedure
+вызван метод CreateTable
+вызван метод CreateTable
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+task2: вызван метод ReadFile
+task3: вызван метод ReadFile
+task2: файл file1.xml.sql существует. Удаляем его
+task3: файл file2.xml.sql существует. Удаляем его
+task2: записываем в файл file1.xml.sql
+task3: записываем в файл file2.xml.sql
+вызван метод GetProcedureHeader
+вызван метод GetProcedureHeader
+метод GetProcedureHeader завершен и вернул: CREATE PROCEDURE ErrorCodesPro as begin
+метод GetProcedureHeader завершен и вернул: CREATE PROCEDURE CategoriesPro as begin
+task2: Закрываем файл и открываем file1.xml для чтения
+task3: Закрываем файл и открываем file2.xml для чтения
+task2: считали строку: <ErrorCode code="-1" text="Оператор временно недоступен"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> Index=0
+task2: метод getValue завершен и вернул output=-1
+task3: считали строку:     <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="-1" text="Оператор временно недоступен"/> Index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=0
+task2: метод getValue завершен и вернул output=Оператор временно недоступен
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: метод getValue завершен и вернул output=100
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=Автоматический выбор оператора
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=2
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=-1) insert ErrorCodes(code, text) values(-1, 'Оператор временно недоступен')
+task3: метод getValue завершен и вернул output=0
+Записываем строку в файл file1.xml.sql
+task3: вызван метод GetValue с параметрами stroka=    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/> Index=3
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="0" text="Ошибки нет"/>
+task3: метод getValue завершен и вернул output=main_main_ico.gif
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="0" text="Ошибки нет"/> Index=0
+task2: метод getValue завершен и вернул output=0
+Вызван метод WriteDataTtoProcedure с значениями values=
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="0" text="Ошибки нет"/> Index=1
+строка с sql кодом: if not exists (select top(1) * from Categories where id=100) insert Categories(id, name, parent, image) values(100, 'Автоматический выбор оператора', '0', 'main_main_ico.gif')
+task2: метод getValue завершен и вернул output=Ошибки нет
+Вызван метод WriteDataTtoProcedure с значениями values=
+Записываем строку в файл file2.xml.sql
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=0) insert ErrorCodes(code, text) values(0, 'Ошибки нет')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/> Index=0
+task2: считали строку: <ErrorCode code="2" text="сеть недоступна"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="2" text="сеть недоступна"/> Index=0
+task3: метод getValue завершен и вернул output=102
+task3: вызван метод GetValue с параметрами stroka=    <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/> Index=1
+task2: метод getValue завершен и вернул output=2
+task3: метод getValue завершен и вернул output=Мобильная связь
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="2" text="сеть недоступна"/> Index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/> Index=2
+task2: метод getValue завершен и вернул output=сеть недоступна
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: метод getValue завершен и вернул output=0
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=2) insert ErrorCodes(code, text) values(2, 'сеть недоступна')
+task3: вызван метод GetValue с параметрами stroka=    <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/> Index=3
+Записываем строку в файл file1.xml.sql
+task3: метод getValue завершен и вернул output=main_mobile_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="3" text="искомый адрес недоступен"/>
+строка с sql кодом: if not exists (select top(1) * from Categories where id=102) insert Categories(id, name, parent, image) values(102, 'Мобильная связь', '0', 'main_mobile_ico.gif')
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="3" text="искомый адрес недоступен"/> Index=0
+task2: метод getValue завершен и вернул output=3
+Записываем строку в файл file2.xml.sql
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="3" text="искомый адрес недоступен"/> Index=1
+task2: метод getValue завершен и вернул output=искомый адрес недоступен
+Вызван метод WriteDataTtoProcedure с значениями values=
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/> Index=0
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=3) insert ErrorCodes(code, text) values(3, 'искомый адрес недоступен')
+Записываем строку в файл file1.xml.sql
+task3: метод getValue завершен и вернул output=103
+метод WriteDataToProcedure завершен
+task3: вызван метод GetValue с параметрами stroka=    <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/> Index=1
+task2: считали строку: <ErrorCode code="4" text="ошибка доступа"/>
+task3: метод getValue завершен и вернул output=сотовая связь
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="4" text="ошибка доступа"/> Index=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/> Index=2
+task2: метод getValue завершен и вернул output=4
+task3: метод getValue завершен и вернул output=1
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="4" text="ошибка доступа"/> Index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_svyz_ico.gif
+task2: метод getValue завершен и вернул output=ошибка доступа
+Вызван метод WriteDataTtoProcedure с значениями values=
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=103) insert Categories(id, name, parent, image) values(103, 'сотовая связь', '1', 'main_svyz_ico.gif')
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=4) insert ErrorCodes(code, text) values(4, 'ошибка доступа')
+Записываем строку в файл file2.xml.sql
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="5" text="услуга более недоступна"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="5" text="услуга более недоступна"/> Index=0
+task3: считали строку:     <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/>
+task2: метод getValue завершен и вернул output=5
+task3: вызван метод GetValue с параметрами stroka=    <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=104
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="5" text="услуга более недоступна"/> Index=1
+task2: метод getValue завершен и вернул output=услуга более недоступна
+task3: вызван метод GetValue с параметрами stroka=    <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/> Index=1
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: метод getValue завершен и вернул output=автомобильная поддержка
+task3: вызван метод GetValue с параметрами stroka=    <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/> Index=2
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=5) insert ErrorCodes(code, text) values(5, 'услуга более недоступна')
+Записываем строку в файл file1.xml.sql
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/> Index=3
+метод WriteDataToProcedure завершен
+task3: метод getValue завершен и вернул output=main_mob_support_ico.gif
+task2: считали строку: <ErrorCode code="6" text="услуга недоступна в данном регионе"/>
+Вызван метод WriteDataTtoProcedure с значениями values=
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="6" text="услуга недоступна в данном регионе"/> Index=0
+строка с sql кодом: if not exists (select top(1) * from Categories where id=104) insert Categories(id, name, parent, image) values(104, 'автомобильная поддержка', '0', 'main_mob_support_ico.gif')
+task2: метод getValue завершен и вернул output=6
+Записываем строку в файл file2.xml.sql
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="6" text="услуга недоступна в данном регионе"/> Index=1
+task2: метод getValue завершен и вернул output=услуга недоступна в данном регионе
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=6) insert ErrorCodes(code, text) values(6, 'услуга недоступна в данном регионе')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="7" text="услуга уже подключена"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="7" text="услуга уже подключена"/> Index=0
+task2: метод getValue завершен и вернул output=7
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="7" text="услуга уже подключена"/> Index=1
+task2: метод getValue завершен и вернул output=услуга уже подключена
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=7) insert ErrorCodes(code, text) values(7, 'услуга уже подключена')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="8" text="сервер недоступен"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="8" text="сервер недоступен"/> Index=0
+task2: метод getValue завершен и вернул output=8
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="8" text="сервер недоступен"/> Index=1
+task2: метод getValue завершен и вернул output=сервер недоступен
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=8) insert ErrorCodes(code, text) values(8, 'сервер недоступен')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="9" text="недостаточно денег для осуществления операции"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="9" text="недостаточно денег для осуществления операции"/> Index=0
+task2: метод getValue завершен и вернул output=9
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="9" text="недостаточно денег для осуществления операции"/> Index=1
+task2: метод getValue завершен и вернул output=недостаточно денег для осуществления операции
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=9) insert ErrorCodes(code, text) values(9, 'недостаточно денег для осуществления операции')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="10" text="отказано в доступе"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="10" text="отказано в доступе"/> Index=0
+task2: метод getValue завершен и вернул output=10
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="10" text="отказано в доступе"/> Index=1
+task2: метод getValue завершен и вернул output=отказано в доступе
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=10) insert ErrorCodes(code, text) values(10, 'отказано в доступе')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="11" text="оператор голоден"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="11" text="оператор голоден"/> Index=0
+task2: метод getValue завершен и вернул output=11
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="11" text="оператор голоден"/> Index=1
+task2: метод getValue завершен и вернул output=оператор голоден
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=11) insert ErrorCodes(code, text) values(11, 'оператор голоден')
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="12" text="оператор не свободен"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="12" text="оператор не свободен"/> Index=0
+task2: метод getValue завершен и вернул output=12
+метод WriteDataToProcedure завершен
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="12" text="оператор не свободен"/> Index=1
+task3: считали строку:     <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/>
+task2: метод getValue завершен и вернул output=оператор не свободен
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: вызван метод GetValue с параметрами stroka=    <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/> Index=0
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=12) insert ErrorCodes(code, text) values(12, 'оператор не свободен')
+task3: метод getValue завершен и вернул output=105
+Записываем строку в файл file1.xml.sql
+task3: вызван метод GetValue с параметрами stroka=    <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=развлечения
+метод WriteDataToProcedure завершен
+task3: вызван метод GetValue с параметрами stroka=    <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/> Index=2
+task2: считали строку: <ErrorCode code="13" text="вы позвонили во время обеденного перерыва"/>
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/> Index=3
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="13" text="вы позвонили во время обеденного перерыва"/> Index=0
+task3: метод getValue завершен и вернул output=main_joys_ico.gif
+task2: метод getValue завершен и вернул output=13
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="13" text="вы позвонили во время обеденного перерыва"/> Index=1
+Вызван метод WriteDataTtoProcedure с значениями values=
+task2: метод getValue завершен и вернул output=вы позвонили во время обеденного перерыва
+строка с sql кодом: if not exists (select top(1) * from Categories where id=105) insert Categories(id, name, parent, image) values(105, 'развлечения', '0', 'main_joys_ico.gif')
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=13) insert ErrorCodes(code, text) values(13, 'вы позвонили во время обеденного перерыва')
+Записываем строку в файл file2.xml.sql
+Записываем строку в файл file1.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="106" name="книги" parent="1" image="main_book_ico.gif"/>
+метод WriteDataToProcedure завершен
+task2: считали строку: <ErrorCode code="15" text="вы позвонили слишком рано, попробуйте позже"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="106" name="книги" parent="1" image="main_book_ico.gif"/> Index=0
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="15" text="вы позвонили слишком рано, попробуйте позже"/> Index=0
+task3: метод getValue завершен и вернул output=106
+task3: вызван метод GetValue с параметрами stroka=    <category id="106" name="книги" parent="1" image="main_book_ico.gif"/> Index=1
+task2: метод getValue завершен и вернул output=15
+task3: метод getValue завершен и вернул output=книги
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="15" text="вы позвонили слишком рано, попробуйте позже"/> Index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="106" name="книги" parent="1" image="main_book_ico.gif"/> Index=2
+task2: метод getValue завершен и вернул output=вы позвонили слишком рано, попробуйте позже
+task3: метод getValue завершен и вернул output=1
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: вызван метод GetValue с параметрами stroka=    <category id="106" name="книги" parent="1" image="main_book_ico.gif"/> Index=3
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=15) insert ErrorCodes(code, text) values(15, 'вы позвонили слишком рано, попробуйте позже')
+task3: метод getValue завершен и вернул output=main_book_ico.gif
+Записываем строку в файл file1.xml.sql
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=106) insert Categories(id, name, parent, image) values(106, 'книги', '1', 'main_book_ico.gif')
+метод WriteDataToProcedure завершен
+Записываем строку в файл file2.xml.sql
+task2: считали строку: <ErrorCode code="16" text="вы позвонили слишком поздно, надо было звонить раньше"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="16" text="вы позвонили слишком поздно, надо было звонить раньше"/> Index=0
+метод WriteDataToProcedure завершен
+task2: метод getValue завершен и вернул output=16
+task3: считали строку:     <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="16" text="вы позвонили слишком поздно, надо было звонить раньше"/> Index=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/> Index=0
+task2: метод getValue завершен и вернул output=вы позвонили слишком поздно, надо было звонить раньше
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: метод getValue завершен и вернул output=107
+task3: вызван метод GetValue с параметрами stroka=    <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/> Index=1
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=16) insert ErrorCodes(code, text) values(16, 'вы позвонили слишком поздно, надо было звонить раньше')
+task3: метод getValue завершен и вернул output=музыка
+Записываем строку в файл file1.xml.sql
+task3: вызван метод GetValue с параметрами stroka=    <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+метод WriteDataToProcedure завершен
+task3: вызван метод GetValue с параметрами stroka=    <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/> Index=3
+task2: считали строку: <ErrorCode code="18" text="ночью звонить операторам нельзя"/>
+task3: метод getValue завершен и вернул output=main_music_ico.gif
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="18" text="ночью звонить операторам нельзя"/> Index=0
+Вызван метод WriteDataTtoProcedure с значениями values=
+task2: метод getValue завершен и вернул output=18
+строка с sql кодом: if not exists (select top(1) * from Categories where id=107) insert Categories(id, name, parent, image) values(107, 'музыка', '0', 'main_music_ico.gif')
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="18" text="ночью звонить операторам нельзя"/> Index=1
+Записываем строку в файл file2.xml.sql
+task2: метод getValue завершен и вернул output=ночью звонить операторам нельзя
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=18) insert ErrorCodes(code, text) values(18, 'ночью звонить операторам нельзя')
+метод WriteDataToProcedure завершен
+Записываем строку в файл file1.xml.sql
+task3: считали строку:     <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/>
+метод WriteDataToProcedure завершен
+task3: вызван метод GetValue с параметрами stroka=    <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=108
+task2: считали строку: <ErrorCode code="20" text="оператор спит"/>
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="20" text="оператор спит"/> Index=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/> Index=1
+task2: метод getValue завершен и вернул output=20
+task2: вызван метод GetValue с параметрами stroka=<ErrorCode code="20" text="оператор спит"/> Index=1
+task3: метод getValue завершен и вернул output=фильмы
+task2: метод getValue завершен и вернул output=оператор спит
+task3: вызван метод GetValue с параметрами stroka=    <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/> Index=2
+Вызван метод WriteDataTtoProcedure с значениями values=
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/> Index=3
+строка с sql кодом: if not exists (select top(1) * from ErrorCodes where code=20) insert ErrorCodes(code, text) values(20, 'оператор спит')
+task3: метод getValue завершен и вернул output=main_movie_ico.gif
+Записываем строку в файл file1.xml.sql
+Вызван метод WriteDataTtoProcedure с значениями values=
+метод WriteDataToProcedure завершен
+строка с sql кодом: if not exists (select top(1) * from Categories where id=108) insert Categories(id, name, parent, image) values(108, 'фильмы', '0', 'main_movie_ico.gif')
+Записываем строку в файл file2.xml.sql
+task2: считали строку: </ErrorCodes>
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/>
+task2: закрываем файлfile1.xmlи открываем файл file1.xml.sql
+task3: вызван метод GetValue с параметрами stroka=    <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=109
+task2: завершен метод ReadFile
+task3: вызван метод GetValue с параметрами stroka=    <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/> Index=1
+Вызван метод WriteToDB
+task3: метод getValue завершен и вернул output=кешбек
+task3: вызван метод GetValue с параметрами stroka=    <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+подключаемся к базе данных и выполняем команду:select COUNT(*) from sysobjects where name = 'ErrorCodesPro' and xtype = 'P'
+task3: вызван метод GetValue с параметрами stroka=    <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/> Index=3
+Вызван метод GetConnectionString
+task3: метод getValue завершен и вернул output=main_cashback_ico.gif
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=109) insert Categories(id, name, parent, image) values(109, 'кешбек', '0', 'main_cashback_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=110
+task3: вызван метод GetValue с параметрами stroka=    <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=боевик
+task3: вызван метод GetValue с параметрами stroka=    <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_battle_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=110) insert Categories(id, name, parent, image) values(110, 'боевик', '1', 'main_battle_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=111
+task3: вызван метод GetValue с параметрами stroka=    <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=комедия
+task3: вызван метод GetValue с параметрами stroka=    <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_comedy_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=111) insert Categories(id, name, parent, image) values(111, 'комедия', '0', 'main_comedy_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=112
+task3: вызван метод GetValue с параметрами stroka=    <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=сериалы
+task3: вызван метод GetValue с параметрами stroka=    <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_serials_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=112) insert Categories(id, name, parent, image) values(112, 'сериалы', '0', 'main_serials_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=113
+task3: вызван метод GetValue с параметрами stroka=    <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=аниме
+task3: вызван метод GetValue с параметрами stroka=    <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_anime_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=113) insert Categories(id, name, parent, image) values(113, 'аниме', '1', 'main_anime_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=114
+task3: вызван метод GetValue с параметрами stroka=    <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=приключения
+task3: вызван метод GetValue с параметрами stroka=    <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_adventure_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=114) insert Categories(id, name, parent, image) values(114, 'приключения', '0', 'main_adventure_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=115
+task3: вызван метод GetValue с параметрами stroka=    <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=служба поддержки
+task3: вызван метод GetValue с параметрами stroka=    <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_support_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=115) insert Categories(id, name, parent, image) values(115, 'служба поддержки', '1', 'main_support_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=116
+task3: вызван метод GetValue с параметрами stroka=    <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=отзывы
+task3: вызван метод GetValue с параметрами stroka=    <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_review_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=116) insert Categories(id, name, parent, image) values(116, 'отзывы', '0', 'main_review_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=117
+task3: вызван метод GetValue с параметрами stroka=    <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=тарифы
+task3: вызван метод GetValue с параметрами stroka=    <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_tariph_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=117) insert Categories(id, name, parent, image) values(117, 'тарифы', '1', 'main_tariph_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=118
+task3: вызван метод GetValue с параметрами stroka=    <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=услуги
+task3: вызван метод GetValue с параметрами stroka=    <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=0
+task3: вызван метод GetValue с параметрами stroka=    <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_deal_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=118) insert Categories(id, name, parent, image) values(118, 'услуги', '0', 'main_deal_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку:     <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/>
+task3: вызван метод GetValue с параметрами stroka=    <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/> Index=0
+task3: метод getValue завершен и вернул output=119
+task3: вызван метод GetValue с параметрами stroka=    <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/> Index=1
+task3: метод getValue завершен и вернул output=подарки
+task3: вызван метод GetValue с параметрами stroka=    <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/> Index=2
+task3: метод getValue завершен и вернул output=1
+task3: вызван метод GetValue с параметрами stroka=    <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/> Index=3
+task3: метод getValue завершен и вернул output=main_present_ico.gif
+Вызван метод WriteDataTtoProcedure с значениями values=
+строка с sql кодом: if not exists (select top(1) * from Categories where id=119) insert Categories(id, name, parent, image) values(119, 'подарки', '1', 'main_present_ico.gif')
+Записываем строку в файл file2.xml.sql
+метод WriteDataToProcedure завершен
+task3: считали строку: </Categories>
+task3: закрываем файлfile2.xmlи открываем файл file2.xml.sql
+task3: завершен метод ReadFile
+Вызван метод WriteToDB
+подключаемся к базе данных и выполняем команду:select COUNT(*) from sysobjects where name = 'CategoriesPro' and xtype = 'P'
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+закрывается подключение к базе данных
+закрывается подключение к базе данных
+открывается подключение к базе данных
+открывается подключение к базе данных
+выполняем sql код:CREATE PROCEDURE CategoriesPro as begin if not exists (select top(1) * from Categories where id=100) insert Categories(id, name, parent, image) values(100, 'Автоматический выбор оператора', '0', 'main_main_ico.gif') if not exists (select top(1) * from Categories where id=102) insert Categories(id, name, parent, image) values(102, 'Мобильная связь', '0', 'main_mobile_ico.gif') if not exists (select top(1) * from Categories where id=103) insert Categories(id, name, parent, image) values(103, 'сотовая связь', '1', 'main_svyz_ico.gif') if not exists (select top(1) * from Categories where id=104) insert Categories(id, name, parent, image) values(104, 'автомобильная поддержка', '0', 'main_mob_support_ico.gif') if not exists (select top(1) * from Categories where id=105) insert Categories(id, name, parent, image) values(105, 'развлечения', '0', 'main_joys_ico.gif') if not exists (select top(1) * from Categories where id=106) insert Categories(id, name, parent, image) values(106, 'книги', '1', 'main_book_ico.gif') if not exists (select top(1) * from Categories where id=107) insert Categories(id, name, parent, image) values(107, 'музыка', '0', 'main_music_ico.gif') if not exists (select top(1) * from Categories where id=108) insert Categories(id, name, parent, image) values(108, 'фильмы', '0', 'main_movie_ico.gif') if not exists (select top(1) * from Categories where id=109) insert Categories(id, name, parent, image) values(109, 'кешбек', '0', 'main_cashback_ico.gif') if not exists (select top(1) * from Categories where id=110) insert Categories(id, name, parent, image) values(110, 'боевик', '1', 'main_battle_ico.gif') if not exists (select top(1) * from Categories where id=111) insert Categories(id, name, parent, image) values(111, 'комедия', '0', 'main_comedy_ico.gif') if not exists (select top(1) * from Categories where id=112) insert Categories(id, name, parent, image) values(112, 'сериалы', '0', 'main_serials_ico.gif') if not exists (select top(1) * from Categories where id=113) insert Categories(id, name, parent, image) values(113, 'аниме', '1', 'main_anime_ico.gif') if not exists (select top(1) * from Categories where id=114) insert Categories(id, name, parent, image) values(114, 'приключения', '0', 'main_adventure_ico.gif') if not exists (select top(1) * from Categories where id=115) insert Categories(id, name, parent, image) values(115, 'служба поддержки', '1', 'main_support_ico.gif') if not exists (select top(1) * from Categories where id=116) insert Categories(id, name, parent, image) values(116, 'отзывы', '0', 'main_review_ico.gif') if not exists (select top(1) * from Categories where id=117) insert Categories(id, name, parent, image) values(117, 'тарифы', '1', 'main_tariph_ico.gif') if not exists (select top(1) * from Categories where id=118) insert Categories(id, name, parent, image) values(118, 'услуги', '0', 'main_deal_ico.gif') if not exists (select top(1) * from Categories where id=119) insert Categories(id, name, parent, image) values(119, 'подарки', '1', 'main_present_ico.gif')end
+выполняем sql код:CREATE PROCEDURE ErrorCodesPro as begin if not exists (select top(1) * from ErrorCodes where code=-1) insert ErrorCodes(code, text) values(-1, 'Оператор временно недоступен') if not exists (select top(1) * from ErrorCodes where code=0) insert ErrorCodes(code, text) values(0, 'Ошибки нет') if not exists (select top(1) * from ErrorCodes where code=2) insert ErrorCodes(code, text) values(2, 'сеть недоступна') if not exists (select top(1) * from ErrorCodes where code=3) insert ErrorCodes(code, text) values(3, 'искомый адрес недоступен') if not exists (select top(1) * from ErrorCodes where code=4) insert ErrorCodes(code, text) values(4, 'ошибка доступа') if not exists (select top(1) * from ErrorCodes where code=5) insert ErrorCodes(code, text) values(5, 'услуга более недоступна') if not exists (select top(1) * from ErrorCodes where code=6) insert ErrorCodes(code, text) values(6, 'услуга недоступна в данном регионе') if not exists (select top(1) * from ErrorCodes where code=7) insert ErrorCodes(code, text) values(7, 'услуга уже подключена') if not exists (select top(1) * from ErrorCodes where code=8) insert ErrorCodes(code, text) values(8, 'сервер недоступен') if not exists (select top(1) * from ErrorCodes where code=9) insert ErrorCodes(code, text) values(9, 'недостаточно денег для осуществления операции') if not exists (select top(1) * from ErrorCodes where code=10) insert ErrorCodes(code, text) values(10, 'отказано в доступе') if not exists (select top(1) * from ErrorCodes where code=11) insert ErrorCodes(code, text) values(11, 'оператор голоден') if not exists (select top(1) * from ErrorCodes where code=12) insert ErrorCodes(code, text) values(12, 'оператор не свободен') if not exists (select top(1) * from ErrorCodes where code=13) insert ErrorCodes(code, text) values(13, 'вы позвонили во время обеденного перерыва') if not exists (select top(1) * from ErrorCodes where code=15) insert ErrorCodes(code, text) values(15, 'вы позвонили слишком рано, попробуйте позже') if not exists (select top(1) * from ErrorCodes where code=16) insert ErrorCodes(code, text) values(16, 'вы позвонили слишком поздно, надо было звонить раньше') if not exists (select top(1) * from ErrorCodes where code=18) insert ErrorCodes(code, text) values(18, 'ночью звонить операторам нельзя') if not exists (select top(1) * from ErrorCodes where code=20) insert ErrorCodes(code, text) values(20, 'оператор спит')end
+выполнена функция WriteToDB
+выполнена функция WriteToDB
+Вызван метод GetConnectionString
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+Вызван метод Output
+вторая задача выполнена
+код sql запроса:select id, name, parent, image from Categories order by parent, name
+Открываем соединение с базой данных
+Вызван метод GetConnectionString
+Метод GetConnectionString завершен и возвращает connectionstring=jdbc:sqlserver://localhost;integratedSecurity=true;databasename=Collection;AttachDBFilename=F:\MultipleTask\\Collection.mdf
+подключение к бд закрыто, метод output завершен
+task3: задача завершена

@@ -1,0 +1,21 @@
+<Categories>
+    <category id="100" name="Автоматический выбор оператора" parent="0" image="main_main_ico.gif"/>
+    <category id="102" name="Мобильная связь" parent="0" image="main_mobile_ico.gif"/>
+    <category id="103" name="сотовая связь" parent="1" image="main_svyz_ico.gif"/>
+    <category id="104" name="автомобильная поддержка" parent="0" image="main_mob_support_ico.gif"/>
+    <category id="105" name="развлечения" parent="0" image="main_joys_ico.gif"/>
+    <category id="106" name="книги" parent="1" image="main_book_ico.gif"/>
+    <category id="107" name="музыка" parent="0" image="main_music_ico.gif"/>
+    <category id="108" name="фильмы" parent="0" image="main_movie_ico.gif"/>
+    <category id="109" name="кешбек" parent="0" image="main_cashback_ico.gif"/>
+    <category id="110" name="боевик" parent="1" image="main_battle_ico.gif"/>
+    <category id="111" name="комедия" parent="0" image="main_comedy_ico.gif"/>
+    <category id="112" name="сериалы" parent="0" image="main_serials_ico.gif"/>
+    <category id="113" name="аниме" parent="1" image="main_anime_ico.gif"/>
+    <category id="114" name="приключения" parent="0" image="main_adventure_ico.gif"/>
+    <category id="115" name="служба поддержки" parent="1" image="main_support_ico.gif"/>
+    <category id="116" name="отзывы" parent="0" image="main_review_ico.gif"/>
+    <category id="117" name="тарифы" parent="1" image="main_tariph_ico.gif"/>
+    <category id="118" name="услуги" parent="0" image="main_deal_ico.gif"/>
+    <category id="119" name="подарки" parent="1" image="main_present_ico.gif"/>
+</Categories>
